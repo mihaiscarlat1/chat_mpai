@@ -1,0 +1,13 @@
+@import com.fasterxml.jackson.databind.node.ObjectNode
+@(title: String, messages: List[ObjectNode])
+
+
+@title
+
+    <div>
+        <ul>
+        @for(message <- messages) {
+            <li>@(message)</li>
+        }
+        </ul>
+    </div>
